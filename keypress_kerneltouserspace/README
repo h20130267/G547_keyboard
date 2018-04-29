@@ -1,0 +1,16 @@
+
+
+Step1: This project directory contains input_sub.c file which is the host side driver written to automatically generate a keypress event by using a timer every 15 sec and a user space application "input_sub_app.c" was written to check the communiaction b/w input sub system, event handler and user space application.
+
+		a. make clean
+
+		b. make all
+
+		c. sudo insmod input_sub.ko
+
+		d. gcc -o input_sub_app input_sub_app.c
+		e. ./input_sub_app
+ 
+		
+Incase you are done using the module it can be removed from kernel by giving following command:
+suudo rmmod input_sub.ko
